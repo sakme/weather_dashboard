@@ -1,0 +1,8 @@
+header {
+  background: linear-gradient(to right, #4557aa, #0e1a4e);
+}
+
+header h1 {
+  color: #ffffff;
+  padding: 5px 5px 15px 5px;
+}
