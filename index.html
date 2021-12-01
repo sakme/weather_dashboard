@@ -35,13 +35,16 @@
         <h1 class="text-center sticky-top">Weather Dashboard</h1>
     </header>
 
-    <main>
-        <div class="row">
-            <div id="search" class="col-3">
-                <h2 class="col-12">Search for a City:</h2>
-                <input type="text" name="searchInput" id="searchInput" class="col-12" placeholder="Type location here" />
-                <button type="submit" id="searchButton" class="col-12">Search</button>
-                <ul class="col-12"></ul>
+    <main class="container-fluid">
+        <div class="row flex">
+            <div class="col-3">
+                <form id="searchForm" class="col-12">
+                    <h2 class="col-12">Search for a City:</h2>
+                    <input type="text" name="searchInput" id="searchInput" class="col-12" placeholder="Type location here" />
+                    <button type="submit" id="searchButton" class="col-12">Search</button>
+                </form>
+                <form class="col-12 search_history" id="search_history">
+                </form>
             </div>
             <div id="display" class="col-9">
                 <div id="today" class="row">

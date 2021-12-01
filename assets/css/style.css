@@ -6,3 +6,28 @@ header h1 {
   color: #ffffff;
   padding: 5px 5px 15px 5px;
 }
+
+#searchForm input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#searchButton {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #4bc1e6;
+}
+
+#search_history {
+  border-top: 1px solid #000000;
+  margin-top: 10px;
+}
+
+#searchHistoryButton {
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: #646464;
+  padding: 1px 15px;
+  border: 2px solid #000000;
+  color: #ffffff;
+}
