@@ -31,3 +31,53 @@ header h1 {
   border: 2px solid #000000;
   color: #ffffff;
 }
+
+#today {
+  border: 2px solid black;
+}
+
+.uv_green {
+  background-color: green;
+  padding: 2px 8px;
+  color: white;
+  border-radius: 4px;
+}
+
+.uv_yellow {
+  background-color: yellow;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.uv_orange {
+  background-color: orange;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.uv_red {
+  background-color: red;
+  padding: 2px 8px;
+  color: white;
+  border-radius: 4px;
+}
+
+.uv_purple {
+  background-color: purple;
+  padding: 2px 8px;
+  color: white;
+  border-radius: 4px;
+}
+
+#today p {
+  font-weight: bold;
+}
+
+#forecast {
+  margin-top: 15px;
+}
+
+.future {
+  background-color: #213179;
+  color: #ffffff;
+}

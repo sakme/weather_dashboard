@@ -39,7 +39,7 @@
         <div class="row flex">
             <div class="col-3">
                 <form id="searchForm" class="col-12">
-                    <h2 class="col-12">Search for a City:</h2>
+                    <h3 class="col-12">Search for a City:</h3>
                     <input type="text" name="searchInput" id="searchInput" class="col-12" placeholder="Type location here" />
                     <button type="submit" id="searchButton" class="col-12">Search</button>
                 </form>
@@ -48,20 +48,50 @@
             </div>
             <div id="display" class="col-9">
                 <div id="today" class="row">
-                    <h2 id="city" class="col-12"></h2>
-                    <p id="temp" class="col-12">Temp: </p>
-                    <p id="wind" class="col-12">Wind: </p>
-                    <p id="humidity" class="col-12">Humidity: </p>
-                    <p id="uv" class="col-12">UV Index: </p>
+                    <h3 id="city" class="col-12"></h3>
+                    <p class="col-12">Temp: <span id="temp" ></span></p>
+                    <p class="col-12">Wind: <span id="wind"></span></p>
+                    <p class="col-12">Humidity: <span id="humidity"></span></p>
+                    <p class="col-12 uv">UV Index: <span id="uv"></span></p>
                 </div>
-                <div id="forecast" class="row">
-                    <h2 id="5day" class="col-12">5-Day Forecast:</h2>
+                <div id="forecast" class="row" visibility="hidden">
+                    <h3 id="5day" class="col-12">5-Day Forecast:</h3>
                     <div class="row">
-                        <div class="col-2 card"></div>
-                        <div class="col-2 card"></div>
-                        <div class="col-2 card"></div>
-                        <div class="col-2 card"></div>
-                        <div class="col-2 card"></div>
+                        <div class="col-2 future" id="card1">
+                          <h4 id="date1"></h4>
+                          <img id="icon1">
+                          <p>Temp: <span id="temp1"  visibility="hidden"></span></p>
+                          <p>Wind: <span id="wind1"></span></p>
+                          <p>Humidity: <span id="humidity1"></span></p>
+                        </div>
+                        <div class="col-2 future" id="card2">
+                          <h4 id="date2"></h4>
+                          <img id="icon2">
+                          <p>Temp: <span id="temp2"></span></p>
+                          <p>Wind: <span id="wind2"></span></p>
+                          <p>Humidity: <span id="humidity2"></span></p>
+                        </div>
+                        <div class="col-2 future" id="card3">
+                          <h4 id="date3"></h4>
+                          <img id="icon3">
+                          <p>Temp: <span id="temp3"></span></p>
+                          <p>Wind: <span id="wind3"></span></p>
+                          <p>Humidity: <span id="humidity3"></span></p>
+                        </div>
+                        <div class="col-2 future" id="card4">
+                          <h4 id="date4"></h4>
+                          <img id="icon4">
+                          <p>Temp: <span id="temp4"></span></p>
+                          <p>Wind: <span id="wind4"></span></p>
+                          <p>Humidity: <span id="humidity4"></span></p>
+                        </div>
+                        <div class="col-2 future" id="card5">
+                          <h4 id="date5"></h4>
+                          <img id="icon5">
+                          <p>Temp: <span id="temp5"></span></p>
+                          <p>Wind: <span id="wind5"></span></p>
+                          <p>Humidity: <span id="humidity5"></span></p>
+                        </div>
                     </div>
                 </div>
             </div>
