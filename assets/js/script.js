@@ -144,7 +144,7 @@ var getWeather = function(lat,lon) {
 
                 // create today h3 element and set value
                 var forecastH3El = document.createElement("h3");
-                forecastH3El.classList = "col-12";
+                forecastH3El.classList = "col-xs-6 col-sm-12";
                 forecastH3El.setAttribute("id", "5day");
                 forecastH3El.textContent = "5-Day Forecast:";
                 forecastDivEl.appendChild(forecastH3El);
@@ -159,7 +159,7 @@ var getWeather = function(lat,lon) {
                 for (var i = 0; i < 5; i++) {
                     // create card div element
                     var futureDivEl = document.createElement("div");
-                    futureDivEl.classList = "col-2 future";
+                    futureDivEl.classList = "col-xs-6 col-sm-4 col-md-3 col-xl-2 future";
                     futureDivEl.setAttribute("id", "card");
 
                     // create card h4 element
@@ -226,32 +226,33 @@ var formSubmitHandler = function(event) {
 
     if (local) {
         getLocation(local);
-    } else {
-        alert("Please enter a valid location.");
-    }
+    } 
 
-    var button = document.createElement("button");
-    button.classList = "col-12 searchHistoryButton";
-    button.setAttribute("id", "searchHistoryButton");
-    button.setAttribute("type", "submit");
-    button.setAttribute("form", "searchHistoryButton");
-    button.setAttribute("value", local);
-    button.textContent = local;
-
-    var form = document.querySelector("#search_history");
-
-    form.appendChild(button);
+    if (local) {
+        var button = document.createElement("button");
+        button.classList = "col-12 searchHistoryButton";
+        button.setAttribute("id", "searchHistoryButton");
+        button.setAttribute("type", "submit");
+        button.setAttribute("form", "searchHistoryButton");
+        button.setAttribute("value", local);
+        button.textContent = local;
     
-    if (searchHistory.length >= 10) {
-        var tempHistory = searchHistory.slice(-9);
-        searchHistory = tempHistory;
-        searchHistory.push(local);
-        saveHistory();
-        $(".searchHistoryButton:first-child").remove();
-    } else {
-        searchHistory.push(local);
-        saveHistory();
+        var form = document.querySelector("#search_history");
+    
+        form.appendChild(button);
+        if (searchHistory.length >= 10) {
+            var tempHistory = searchHistory.slice(-9);
+            searchHistory = tempHistory;
+            searchHistory.push(local);
+            saveHistory();
+            $(".searchHistoryButton:first-child").remove();
+        } else {
+            searchHistory.push(local);
+            saveHistory();
+        }
     }
+    
+    
 };
 
 // search when history item clicked

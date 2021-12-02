@@ -31,21 +31,21 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header>
-        <h1 class="text-center sticky-top">Weather Dashboard</h1>
+    <header class="sticky-top">
+        <h1 class="text-center">Weather Dashboard</h1>
     </header>
 
     <main class="container-fluid">
         <div class="row flex">
-            <div class="col-3">
+            <div class="col-xs-12 col-xl-3" id="search">
                 <form id="searchForm" class="col-12">
                     <h3 class="col-12">Search for a City:</h3>
                     <input type="text" name="searchInput" id="searchInput" class="col-12" placeholder="Type location here" />
                     <button type="submit" id="searchButton" class="col-12">Search</button>
                 </form>
-                <form class="col-12 search_history" id="search_history"></form>
+                <form class="col-xs-12 col-xl-3 search_history" id="search_history"></form>
             </div>
-            <div id="display" class="col-9">
+            <div id="display" class="col-xs-12 col-xl-9">
             </div>
         </div>
     </main>
