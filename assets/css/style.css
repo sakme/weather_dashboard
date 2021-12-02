@@ -75,9 +75,25 @@ header h1 {
 
 #forecast {
   margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#forecast div {
+  width: 100%;
 }
 
 .future {
   background-color: #213179;
   color: #ffffff;
+  margin: 0 15px;
+}
+
+.future h4 {
+  font-size: 1.25rem;
+  padding-top: 5px;
+}
+
+.future p {
+  font-size: 1rem;
 }
