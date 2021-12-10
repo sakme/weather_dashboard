@@ -222,11 +222,18 @@ var formSubmitHandler = function(event) {
 
     var local = locationInputEl.value.trim();
 
+    if (!local.includes(",")) {
+        errorPrompt();
+        return;
+    }
+
     locationInputEl.value = "";
 
     if (local) {
         getLocation(local);
-    } 
+    } else {
+        alert("Please enter a valid location.");
+    }
 
     if (local) {
         var button = document.createElement("button");
@@ -263,8 +270,6 @@ var formHistorySubmitHandler = function(event) {
 
     if (locale) {
         getLocation(locale);
-    } else {
-        alert("Please enter a valid location.");
     }
 };
 
@@ -299,6 +304,12 @@ var loadHistory = function() {
         form.appendChild(button);
     }
 };
+
+// display entry error and reload page
+var errorPrompt = function() {
+    window.alert("Please enter loction in the format [CITY, STATE CODE] for example: Columbus, OH");
+    document.location.reload();
+}
 
 loadHistory();
 
